@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const logger = require('./logger')();
+const config = require('config');
 
 module.exports = function () {
+    const db = config.get('db');
     // connecting to the db
-    mongoose.connect('mongodb://127.0.0.1/vidly')
-        .then(() => logger.info('Connected to MongoDB...'));
+    mongoose.connect(db)
+        .then(() => logger.info(`Connected to ${db}...`));
 }
