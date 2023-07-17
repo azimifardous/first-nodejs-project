@@ -5,7 +5,6 @@ const express = require('express');
 const auth = require('../middleware/auth')
 const router = express.Router();
 
-
 router.get('/me', auth, async (req, res) => {
     const user = User.findById(req.user._id).select('-password');
     res.send(user)

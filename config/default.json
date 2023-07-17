@@ -1,4 +1,5 @@
 {
   "jwtPrivateKey": "",
-  "db": "mongodb://127.0.0.1/vidly"
+  "db": "mongodb://127.0.0.1/vidly",
+  "requiresAuth": true
 }
